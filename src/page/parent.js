@@ -2,6 +2,8 @@
 import React, { useEffect, useState } from 'react';
 // import { Link } from 'react-router-dom';
 import {Children} from './children'
+import ReactSimpleVerify from '../components/simpleVerify'
+
 
 export function Parent() {
     const [count, setCount] = useState(0);
@@ -60,6 +62,7 @@ export function Parent() {
     return (
         <div className="App">
             <div>
+                    m1
                 {count}
                 <button onClick={() => setCount(count + 1)}>
                     点我加1
@@ -69,6 +72,7 @@ export function Parent() {
             --------------------------------------
             <br/>
             <Children  count={count}/>
+            <ReactSimpleVerify />
         </div>
     );
 }
