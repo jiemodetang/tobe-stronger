@@ -60,7 +60,7 @@ export function Parent() {
     return (
         <div className="App">
             <div>
-                {count}
+                {count} marter
                 <button onClick={() => setCount(count + 1)}>
                     点我加1
                 </button>
