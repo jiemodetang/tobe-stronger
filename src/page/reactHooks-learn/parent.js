@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 // import { Link } from 'react-router-dom';
 import {Children} from './children'
-import ReactSimpleVerify from '../components/simpleVerify'
+import ReactSimpleVerify from '../../components/simpleVerify'
 
 
 export function Parent() {

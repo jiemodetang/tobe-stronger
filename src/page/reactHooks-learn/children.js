@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
-import axiosApi from '../utils/axios'
+import axiosApi from '../../utils/axios'
 
 
 
