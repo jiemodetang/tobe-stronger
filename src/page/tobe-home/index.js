@@ -19,24 +19,9 @@ const Home = (props) => {
                     <ToBe_left />
                     <ToBe_right children={children} />
                 </Layout>
+
                 <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
             </Layout>
-
-            {
-                '当前路由是不是home里的' ?
-                    <Layout style={{ height: '100%' }}>
-                        <ToBe_header />
-                        <Layout style={{ padding: '70px 50px 0px 50px' }}>
-                            <ToBe_left />
-                            <ToBe_right children={children} />
-                        </Layout>
-                        <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
-                    </Layout>
-                    : 
-                    <div>
-                        登陆页面
-                    </div>
-            }
         </Fragment>
     )
 }
