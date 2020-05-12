@@ -1,6 +1,8 @@
 import { Parent } from '../page/reactHooks-learn/parent'
 import { Children } from '../page/reactHooks-learn/children'
 import TestReudex  from '../page/test-redux'
+import TesthooksRudex  from '../page/react-hooks-redux'
+
 import App from '../page/app'
 import Loadable from 'react-loadable';
 import React from 'react';
@@ -42,5 +44,9 @@ export const config = [
     {
         path: '/testRudex',
         component: TestReudex,
-    }
+    },
+    {
+      path: '/testhooksRudex',
+      component: TesthooksRudex,
+  }
 ]
