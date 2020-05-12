@@ -3,8 +3,7 @@ import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
 import RouterConfig from './router'
 import { BrowserRouter } from 'react-router-dom';
-
-
+import 'antd/dist/antd.css'
 ReactDOM.render(
   <BrowserRouter>
     <RouterConfig />
