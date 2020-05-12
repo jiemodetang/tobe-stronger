@@ -11,7 +11,7 @@ const ToBe_header = () => {
         <Header className="header" style={{ background: '#fff', position: 'fixed', zIndex: 1, width: '100%' }}>
             <div className="logo" />
             <Menu theme="light" mode="horizontal" defaultSelectedKeys={['1']}>
-                <Menu.Item key="1"><Link to='/parent'>react-hook </Link></Menu.Item>
+                <Menu.Item key="1"><Link to='/home'>react-hook </Link></Menu.Item>
                 <Menu.Item key="2">吹逼环节</Menu.Item>
                 {/* <Menu.Item key="3">nav 3</Menu.Item> */}
             </Menu>
