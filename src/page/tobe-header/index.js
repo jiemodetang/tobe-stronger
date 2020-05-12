@@ -11,10 +11,10 @@ const ToBe_header = () => {
             <img src="http://www.logofree.cn/uploads/image/20180929/14/3-58_3299.jpg" alt=""  className="logo"/>
             <Menu theme="light" mode="horizontal" defaultSelectedKeys={['1']}>
                 <Menu.Item key="1">
-                    <Link to='/react_hook'>react-hook </Link>
+                    <Link to='/home'>react-hook </Link>
                 </Menu.Item>
                 <Menu.Item key="2">
-                    <Link to='/project_time_line'>项目时间线</Link>
+                    <Link to='/home/project_time_line'>项目时间线</Link>
                 </Menu.Item>
                 {/* <Menu.Item key="3">nav 3</Menu.Item> */}
             </Menu>

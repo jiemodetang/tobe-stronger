@@ -44,7 +44,7 @@ const RouterConfig = () => {
                     {config.map((route, i) => (
                         <RouteWithSubRoutes key={i} {...route} />
                     ))}
-                    </Home>
+                </Home>
             </Switch>
         </Router>
     )
