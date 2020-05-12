@@ -20,7 +20,7 @@ const Home = (props) => {
                     <ToBe_right children={children} />
                 </Layout>
 
-                <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
+                <Footer style={{ textAlign: 'center' }}>toBe-better-man ©2018 Created by one</Footer>
             </Layout>
         </Fragment>
     )
