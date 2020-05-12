@@ -12,9 +12,7 @@ import combineReducers from '../store/combineReducers';
 // 引入lodash
 import _omit from 'lodash/omit';
 
-
-
-import App from '../page/app'
+import Home from '../page/tobe-home'
 
 const createStoreWithMiddleware = compose(
     applyMiddleware(thunk),
@@ -42,9 +40,11 @@ const RouterConfig = () => {
     return (
         <Router>
             <Switch>
+                <Home>
                     {config.map((route, i) => (
                         <RouteWithSubRoutes key={i} {...route} />
                     ))}
+                    </Home>
             </Switch>
         </Router>
     )

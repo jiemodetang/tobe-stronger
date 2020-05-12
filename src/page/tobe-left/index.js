@@ -2,10 +2,8 @@
 
 
 import React from 'react';
-import { Layout, Menu, Badge } from 'antd';
-import { UserOutlined, LaptopOutlined, NotificationOutlined } from '@ant-design/icons';
-const { SubMenu } = Menu;
-const { Header, Content, Footer, Sider } = Layout;
+import { Layout, Badge } from 'antd';
+const { Sider } = Layout;
 
 const colors = [
     'pink',

@@ -60,7 +60,6 @@ export function Parent() {
     //--------------------
 
     return (
-        <Home on= '1'>
             <div className="App">
                 <div>
                     {count} marter
@@ -74,8 +73,5 @@ export function Parent() {
                 <Children count={count} />
                 <ReactSimpleVerify />
             </div>
-
-        </Home>
-
     );
 }
