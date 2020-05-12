@@ -1,9 +1,9 @@
 
 import React, { useEffect, useState } from 'react';
 // import { Link } from 'react-router-dom';
-import {Children} from './children'
+import { Children } from './children'
 import ReactSimpleVerify from '../../components/simpleVerify'
-
+import Home from '../tobe-home'
 
 export function Parent() {
     const [count, setCount] = useState(0);
@@ -60,18 +60,22 @@ export function Parent() {
     //--------------------
 
     return (
-        <div className="App">
-            <div>
-                {count} marter
+        <Home on= '1'>
+            <div className="App">
+                <div>
+                    {count} marter
                 <button onClick={() => setCount(count + 1)}>
-                    点我加1
+                        点我加1
                 </button>
-              
-            </div>
+
+                </div>
             --------------------------------------
-            <br/>
-            <Children  count={count}/>
-            <ReactSimpleVerify />
-        </div>
+            <br />
+                <Children count={count} />
+                <ReactSimpleVerify />
+            </div>
+
+        </Home>
+
     );
 }

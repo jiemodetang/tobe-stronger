@@ -2,7 +2,19 @@ import { Parent } from '../page/reactHooks-learn/parent'
 import { Children } from '../page/reactHooks-learn/children'
 import TestReudex  from '../page/test-redux'
 import App from '../page/app'
- 
+import Loadable from 'react-loadable';
+import React from 'react';
+const loadingComponent = ({ error, pastDelay }) => {
+    if (error) {
+      return <div>Error!</div>;
+    } else if (pastDelay) {
+      // return <div>Loading...</div>;
+      return <div />;
+    } else {
+      return null;
+    }
+  };
+
 export const config = [
     {
         path: "/",
@@ -11,22 +23,22 @@ export const config = [
       },
     {
         path: '/home',
-        component: App,
-        routes: [
-            // {
-            //     path: '/home/a',
-            //     component: Parent,
-            // },
-        ]
-    },
-    {
-        path: '/parent',
+        exact: true,
         component: Parent,
     },
-    {
-        path: '/children',
-        component: Children,
-    },
+    // {
+    //     path: '/react-hook',
+    //     exact: true,
+    //     component:  Loadable({
+    //         loader: () => import('../page/tobe-right'),
+    //         loading: loadingComponent,
+    //         delay: 300,
+    //       }),
+    // },
+    // {
+    //     path: '/children',
+    //     component: Children,
+    // },
     {
         path: '/testRudex',
         component: TestReudex,

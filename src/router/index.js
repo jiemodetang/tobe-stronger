@@ -12,6 +12,10 @@ import combineReducers from '../store/combineReducers';
 // 引入lodash
 import _omit from 'lodash/omit';
 
+
+
+import App from '../page/app'
+
 const createStoreWithMiddleware = compose(
     applyMiddleware(thunk),
     window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__() : f => f // 配合 redux 插件 方便开发
@@ -38,10 +42,9 @@ const RouterConfig = () => {
     return (
         <Router>
             <Switch>
-                {/* <Route path="/parent" children={<Parent />} render = {} /> */}
-                {config.map((route, i) => (
-                    <RouteWithSubRoutes key={i} {...route} />
-                ))}
+                    {config.map((route, i) => (
+                        <RouteWithSubRoutes key={i} {...route} />
+                    ))}
             </Switch>
         </Router>
     )

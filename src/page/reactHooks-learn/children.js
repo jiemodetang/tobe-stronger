@@ -13,7 +13,7 @@ export const Children = (props) => {
         .then(res => {
             if(res.status === 200){
                 setChildCount(5000)
-                console.log(res);
+                // console.log(res);
             }
         })
     }, [])
@@ -22,7 +22,7 @@ export const Children = (props) => {
         //根据父组件传的值，弄出子组件需要的state，类似compontWillreceiveProps
         setChildCount(childCount+count+1000)
     }, [count])
-    console.log(112);
+    // console.log(112);
 
     return (
         
