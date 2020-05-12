@@ -1,5 +1,6 @@
 import { Parent } from '../page/reactHooks-learn/parent'
 import { Children } from '../page/reactHooks-learn/children'
+import TestReudex  from '../page/test-redux'
 import App from '../page/app'
  
 export const config = [
@@ -25,5 +26,9 @@ export const config = [
     {
         path: '/children',
         component: Children,
+    },
+    {
+        path: '/testRudex',
+        component: TestReudex,
     }
 ]
