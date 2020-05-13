@@ -5,6 +5,7 @@ import TestReudex from '../page/test-redux'
 import { Project_time_line } from "../page/project-time-line";
 import TesthooksRudex from '../page/react-hooks-redux'
 import ToBe_iframe from "../page/tobe-iframe";
+import Online_editing from "../page/online-editing";
 export const config = [
   // {
   //   path: '/',
@@ -32,7 +33,11 @@ export const config = [
     path: '/iframe',
     component: ToBe_iframe,
   },
-
+  {
+ 
+    path: '/online-editing',
+    component:Online_editing,
+  },
   {
     path: '/testRudex',
     component: TestReudex,
