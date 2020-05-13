@@ -11,7 +11,7 @@ const ToBe_header = () => {
          
             <Menu theme="light" mode="horizontal" defaultSelectedKeys={['1']}>
                 <Menu.Item key="1">
-                    <Link to='/react_hook'>react-hook </Link>
+                    <Link to='/react'>react-hook </Link>
                 </Menu.Item>
                 <Menu.Item key="2">
                     <Link to='/project_time_line'>项目时间线</Link>

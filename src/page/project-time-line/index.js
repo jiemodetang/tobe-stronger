@@ -6,7 +6,7 @@ import { ClockCircleOutlined } from '@ant-design/icons';
 const dongcidaci = () => {
     let data = []
     let str =
-    <Timeline mode="alternate">
+    <Timeline mode="alternate" style={{paddingTop:'10px'}}>
         <Timeline.Item>我要做渣男  2015-09-01</Timeline.Item>
         <Timeline.Item color="green"> 你好我是你爹2015-09-01</Timeline.Item>
         <Timeline.Item dot={<ClockCircleOutlined style={{ fontSize: '16px' }}  />}>
@@ -25,7 +25,6 @@ const dongcidaci = () => {
 
 }
 export const Project_time_line = () => {
-    console.log( dongcidaci())
     return (
             dongcidaci()
     )

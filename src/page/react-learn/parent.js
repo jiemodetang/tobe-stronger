@@ -4,8 +4,17 @@ import React, { useEffect, useState } from 'react';
 import { Children } from './children'
 import ReactSimpleVerify from '../../components/simpleVerify'
 import Home from '../tobe-home'
-
-export function Parent() {
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link,
+    useParams,
+    useLocation
+  } from "react-router-dom";
+export function Parent(props) {
+    console.log(props,useLocation().state)
+    let { id } = useParams()
     const [count, setCount] = useState(0);
     // 类似于componentdidmount 和 componentdidupdate
     useEffect(() => {
@@ -60,7 +69,11 @@ export function Parent() {
     //--------------------
 
     return (
+
             <div className="App">
+                    路由传过来的:{id}
+                    <br/><br/>
+                    <br/><br/>  <br/><br/>
                 <div>
                     {count} marter
                 <button onClick={() => setCount(count + 1)}>

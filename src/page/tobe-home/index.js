@@ -8,18 +8,19 @@ import './index.scss'
 import ToBe_right from "../tobe-right";
 import ToBe_left from "../tobe-left";
 import ToBe_header from "../tobe-header";
-const { Footer } = Layout;
+const { Footer, Content } = Layout;
 const Home = (props) => {
     const { children } = props
     return (
         <Fragment>
-            <Layout style={{ height: '100%' }}>
+            <Layout>
                 <ToBe_header />
-                <Layout style={{ padding: '70px 50px 0px 50px' }}>
-                    <ToBe_left />
-                    <ToBe_right children={children} />
-                </Layout>
-
+                <Content>
+                    <Layout className="site-layout" style={{ padding: '0 50px', marginTop: 80 }}>
+                        <ToBe_left />
+                        <ToBe_right children={children} />
+                    </Layout>
+                </Content>
                 <Footer style={{ textAlign: 'center' }}>toBe-better-man ©2018 Created by one</Footer>
             </Layout>
         </Fragment>
