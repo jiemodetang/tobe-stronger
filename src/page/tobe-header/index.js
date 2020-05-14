@@ -6,7 +6,7 @@ const { Header } = Layout;
 
 const ToBe_header = () => {
     return (
-        <Header className="header" style={{ background: '#fff', position: 'fixed', zIndex: 1, width: '100%' }}>
+        <Header className="header" style={{ background: '#fff', position: 'fixed', zIndex: 100, width: '100%' }}>
             <div className="logo" >   <img src="http://www.logofree.cn/uploads/image/20180929/14/3-58_3299.jpg" alt="" /></div>
          
             <Menu theme="light" mode="horizontal" defaultSelectedKeys={['1']}>
