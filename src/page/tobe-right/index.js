@@ -6,7 +6,7 @@ const ToBe_right = (props) => {
     console.log(document.querySelector('body'));
     
     return (
-        <Layout style={{ margin: '0 24px 0 24px', background: '#fff',  }}>
+        <Layout style={{ margin: '0 24px 0 24px', background: '#fff', minHeight:'80vh' }}>
             <Content
                 className="site-layout-background"
                 style={{

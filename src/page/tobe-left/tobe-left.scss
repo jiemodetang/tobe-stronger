@@ -173,6 +173,15 @@
       padding-bottom: 10px;
     }
   }
- .ant-layout .ant-layout-sider-trigger{
-    background: #656565;
+ .ant-layout  {
+ 
+    .ant-layout-sider{
+      position: relative;
+      .ant-layout-sider-trigger{
+        background: #656565;
+        position: absolute;
+      }
+      
+
+    }
   }
