@@ -9,6 +9,12 @@ module.exports = {
         loader: 'less-loader', // compiles Less to CSS
       }],
       // ...other rules
-    }],
+    },
+    {
+      test: /\.md$/,
+      use: "raw-loader"
+    }
+  
+  ],
     // ...other config
   }

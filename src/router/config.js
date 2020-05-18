@@ -6,6 +6,7 @@ import { Project_time_line } from "../page/project-time-line";
 import TesthooksRudex from '../page/react-hooks-redux'
 import ToBe_iframe from "../page/tobe-iframe";
 import Online_editing from "../page/online-editing";
+import Markdown_editing from "../page/markdown-editing";
 export const config = [
   // {
   //   path: '/',
@@ -37,6 +38,11 @@ export const config = [
  
     path: '/online-editing',
     component:Online_editing,
+  },
+  {
+ 
+    path: '/markdown-editing',
+    component:Markdown_editing,
   },
   {
     path: '/testRudex',

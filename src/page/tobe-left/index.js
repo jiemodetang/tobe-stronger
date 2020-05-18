@@ -1,11 +1,11 @@
 
 
 
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import { Avatar, message } from 'antd';
 import './tobe-left.scss'
-import { AppstoreOutlined, MailOutlined, SettingOutlined } from '@ant-design/icons';
-import {Link } from 'react-router-dom';
+import { AppstoreOutlined, MailOutlined, SettingOutlined, FileOutlined, PieChartOutlined } from '@ant-design/icons';
+import { Link } from 'react-router-dom';
 import { Layout, Menu, Breadcrumb } from 'antd';
 
 const { SubMenu } = Menu;
@@ -19,7 +19,9 @@ const colors = [
     'purple',
     'gold',
 ];
+
 const ToBe_left = () => {
+    const [collapsed, setCollapsed] = useState(false)
     const list = [{
         "_id": "5cf37d2874289f3d47ed1468",
         "name": "数据结构与算法"
@@ -71,59 +73,81 @@ const ToBe_left = () => {
     }].map((item, i) => (
         <span key={item._id} className="item" style={{ background: colors[Math.floor(Math.random() * (colors.length - 1) + 0)] }}>{item.name}</span>
     ));
+    const onCollapse = () => {
+        setCollapsed(!collapsed)
+    }
     return (
-        <Sider width={300} style={{ background: '#fff', padding: '10px' }}>
-            <div className="right"  >
-                <Avatar className="right-logo" src='https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3832429334,1089079337&fm=11&gp=0.jpg' size={130} icon="user" />
-                <div className="title">toBe</div>
-                <div className="right-content">
-                </div>
-                <div className="tags">
-                    <div className="title">标签云</div>
-                    {list}
-                </div>
+        <Sider
+            width={300}
+            style={{ background: '#fff' }}
+            collapsible
+            collapsed={collapsed}
+            onCollapse={onCollapse}
+        >
 
-                <Menu
-                    mode="inline"
-                    // openKeys={this.s}
-                    // onOpenChange={this.onOpenChange}
-                    // style={{ width: 256 }}
+
+
+            <Menu
+                mode="inline"
+                className="right"
+            >
+                <Avatar className="right-logo" src='https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3832429334,1089079337&fm=11&gp=0.jpg' icon="user" />
+                { !collapsed&&<div className="title">toBe</div>}
+                {
+                    !collapsed && <div className="tags">
+                        <div className="title">标签云</div>
+                        {list}
+                    </div>
+                }
+                <SubMenu
+                    key="sub1"
+                    title={
+                        <span>
+                            <PieChartOutlined />
+                            <span>写入类</span>
+                        </span>
+                    }
                 >
-                    <SubMenu
-                        key="sub1"
-                        title={
-                            <span>
-                                <MailOutlined />
-                                <span>工具类</span>
-                            </span>
-                        }
-                    >
-                        <Menu.Item key="1">
-                            <Link to='/online-editing'>在线编辑</Link>
-                        </Menu.Item>
-                        
-                    </SubMenu>
-                </Menu>
+                    <Menu.Item key="1">
+                        <Link to='/markdown-editing'>markdown编辑</Link>
+                    </Menu.Item>
+                </SubMenu>
 
+                <SubMenu
+                    key="sub2"
+                    title={
+                        <span>
+                            <MailOutlined />
+                            <span>工具类</span>
+                        </span>
+                    }
+                >
+                    <Menu.Item key="1">
+                        <Link to='/online-editing'>代码编辑</Link>
+                    </Menu.Item>
+                </SubMenu>
 
+            </Menu>
 
-
-
-
-                <div className="introduce">
-                    <div className="title">Dj</div>
-                    <div className="content">
-                        <img style={{ 'width': '100%' }} src='https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1375079898,2192941505&fm=11&gp=0.jpg' alt="全栈修炼" />
-                    </div>
-                </div>
-                <div className="introduce">
-                    <div className="title">go</div>
-                    <div className="content">
-                        <img style={{ 'width': '100%' }} src='https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2109373657,2252917049&fm=11&gp=0.jpg' alt="硬核杂货铺" />
-                    </div>
+            <div className="introduce">
+                <div className="title">Dj</div>
+                <div className="content">
+                    <img style={{ 'width': '100%' }} src='https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1375079898,2192941505&fm=11&gp=0.jpg' alt="全栈修炼" />
                 </div>
             </div>
-        </Sider>
+            <div className="introduce">
+                <div className="title">go</div>
+                <div className="content">
+                    <img style={{ 'width': '100%' }} src='https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2109373657,2252917049&fm=11&gp=0.jpg' alt="硬核杂货铺" />
+                </div>
+            </div>
+
+
+
+
+
+
+        </Sider >
 
     )
 }
