@@ -3,6 +3,9 @@ import { Children } from '../page/react-learn/children'
 import { Parent } from '../page/react-learn/parent'
 import TestReudex from '../page/test-redux'
 import { Project_time_line } from "../page/project-time-line";
+import  TreeList  from "../page/tree-List";
+
+
 import TesthooksRudex from '../page/react-hooks-redux'
 import ToBe_iframe from "../page/tobe-iframe";
 import Online_editing from "../page/online-editing";
@@ -51,5 +54,10 @@ export const config = [
   {
     path: '/testhooksRudex',
     component: TesthooksRudex,
+  },
+  {
+    path: '/treeList',
+    component: TreeList,
   }
+  
 ]
